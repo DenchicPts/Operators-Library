@@ -1,7 +1,11 @@
+#pragma once
+
 #include "DenchicPts.h"
 #include <vector>
+using namespace std;
 
-//                                     Operator work
+
+//                          Operator Work
 
 template<typename Type>
 ostream& operator<<(ostream& stream, const vector<Type>& vector) { // Вывод вектора через cout
@@ -20,7 +24,6 @@ istream& operator>>(istream& stream, vector<string>& vector) { // Вводит значени
 	}
 	return stream;
 }
-
 template<typename Type>
 typename enable_if<!is_same<Type, char>::value,
 	vector<Type>>::type
@@ -39,6 +42,7 @@ typename enable_if<!is_same<Type, char>::value,
 		for (size_t i = minSize; i < m.size(); i++) {
 			result.push_back(m[i]);
 		}
+
 	return result;
 }
 
@@ -64,6 +68,7 @@ operator+(const vector<Type1>& a, const vector<Type2>& b) {
 			result.push_back(static_cast<ResultType>(b[i]));
 		}
 	}
+
 	return result;
 }
 
@@ -140,8 +145,12 @@ typename enable_if<is_arithmetic<Type1>::value&& is_arithmetic<Type2>::value,
 
 
 
-//                             Default Function
 
+
+
+//                              Default Function
+// 
+// 
 // Выводит на экран первые max элементов вектора
 template<typename Type>
 void VectorOut(const vector<Type>& vectr, const int& max) {
@@ -170,6 +179,3 @@ void VectorFill(vector<Type>& vectr, const int max, const int min, size_t amount
 		vectr.push_back(min + rand() % (max - min + 1));
 	}
 }
-
-
-
