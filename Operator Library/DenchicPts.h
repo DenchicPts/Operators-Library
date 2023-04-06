@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include "OperVector.h"
 #include "OperSet.h"
+#include "OperMap.h"
 
 using namespace std;
 

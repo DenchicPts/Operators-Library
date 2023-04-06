@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DenchicPts.h" />
+    <ClInclude Include="OperMap.h" />
     <ClInclude Include="OperSet.h" />
     <ClInclude Include="OperVector.h" />
   </ItemGroup>
