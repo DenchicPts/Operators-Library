@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="check.cpp" />
-    <ClCompile Include="OperVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DenchicPts.h" />

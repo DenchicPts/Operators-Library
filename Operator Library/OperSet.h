@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "DenchicPts.h"
 #include <set>
 using namespace std;
