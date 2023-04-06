@@ -26,5 +26,11 @@
     <ClInclude Include="DenchicPts.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="OperVector.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="OperSet.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
