@@ -2,14 +2,25 @@
 
 void main() {
 
-	vector<int> abobus;
-	vector<float> abobus2;
-	VectorFill(abobus, 100, 5);
-	VectorFill(abobus2, 100, 5);
+
+	multimap<int, string> abobus;
+	abobus.emplace(1, "2");
+	abobus.emplace(3, "4");
+	abobus.emplace(2, "3");
+	abobus.emplace(5, "6");
+	abobus.emplace(6, "7");
+
+
+	map<int, string> abobus2;
+	abobus.emplace(2, "2");
+	abobus.emplace(4, "4");
+	abobus.emplace(3, "3");
+	abobus.emplace(6, "6");
+	abobus.emplace(7, "7");
+
+	multimap<int, string> abobus3 = abobus2 + abobus;
+
 	cout << abobus + abobus2;
-	
-	set<int> geg;
-	SetFill(geg, 100, 20);
-	cout << geg;
+	cout << abobus3;
 	return;
 }

@@ -142,12 +142,6 @@ typename enable_if<is_arithmetic<Type1>::value&& is_arithmetic<Type2>::value,
 	return result;
 }
 
-
-
-
-
-
-
 //                              Default Function
 // 
 // 
@@ -160,21 +154,21 @@ void VectorOut(const vector<Type>& vectr, const int& max) {
 	}
 }
 template<typename Type>
-void VectorOut(const vector<Type>& vectr, const int& max, const int& min) {
+void VectorOut(const vector<Type>& vectr, const int& min, const int& max) {
 	for (size_t i = min; i < max; i++)
 	{
 		cout << vectr[i] << " ";
 	}
 }
 template <typename Type, typename = enable_if_t<is_arithmetic_v<Type>>>
-void VectorFill(vector<Type>& vectr, const int max, int amount) {
+void VectorFill(vector<Type>& vectr, const int max, size_t amount) {
 	for (size_t i = 0; i < amount; i++)
 	{
 		vectr.push_back(rand() % max);
 	}
 }
 template <typename Type, typename = enable_if_t<is_arithmetic_v<Type>>>
-void VectorFill(vector<Type>& vectr, const int max, const int min, size_t amount) {
+void VectorFill(vector<Type>& vectr, const int min, const int max, size_t amount) {
 	for (size_t i = 0; i < amount; i++) {
 		vectr.push_back(min + rand() % (max - min + 1));
 	}
