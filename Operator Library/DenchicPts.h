@@ -13,3 +13,4 @@
 
 using namespace std;
 
+map<string, int> wordCounter(ifstream& file, string& punctuation);
