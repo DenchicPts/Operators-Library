@@ -6,14 +6,15 @@ int main() {
 
     string filename = "text.txt";
     ifstream file(filename);
-    if (!file.is_open()) {
+    if (!file.is_open()) { // в случае если файла нету
         cout << "Не удалось открыть файл" << endl;
         return 0;
     }
-    map<string, int> word_counts = wordCounter(file, punctuation);
+
+    map<string, int> word_counts = wordCounter(file, punctuation); // считаю количество слов
     file.close();
 
-    vector<pair<string, int>> word_freq(word_counts.begin(), word_counts.end()); //
+    vector<pair<string, int>> word_freq(word_counts.begin(), word_counts.end()); // создаю вектор, чтобы отсортировать по количеству
 
     sort(word_freq.begin(), word_freq.end(), [](auto const& p1, auto const& p2) {
         return p1.second > p2.second; // лямбда функция не обязательно, можно написать просто функцию
