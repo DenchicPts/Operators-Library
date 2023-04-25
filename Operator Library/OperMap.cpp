@@ -4,20 +4,18 @@
 #include <map>
 using namespace std;
 
-
+template<typename Collection>
+string Join(const Collection& collect, char d);
 //                                     Operation Work
 
-template<typename Type, typename Type2>
-ostream& operator<<(ostream& stream, const map<Type, Type2>& m) { // Вывод контейнера map через cout
-	for (const auto& i : m)
-		stream << i.first << " : " << i.second << endl;
-	return stream;
+template<typename Key, typename Value>
+ostream& operator<<(ostream& out, const map<Key, Value>& m) { // Вывод контейнера map через cout
+	return out << '{' << Join(m, NULL) << '}';
 }
-template<typename Type, typename Type2>
-ostream& operator<<(ostream& stream, const multimap<Type, Type2>& m) { // Вывод мульти контейнера map через cout
-	for (const auto& i : m)
-		stream << i.first << " : " << i.second << endl;
-	return stream;
+
+template<typename Key, typename Value>
+ostream& operator<<(ostream& out, const multimap<Key, Value>& m) { // Вывод мульти контейнера map через cout
+	return out << '{' << Join(m, NULL) << '}';
 }
 
 template <typename Type1, typename Type2>

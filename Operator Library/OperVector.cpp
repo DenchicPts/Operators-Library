@@ -4,14 +4,14 @@
 #include <vector>
 using namespace std;
 
+template<typename Collection>
+string Join(const Collection& collect, char d);
 
 //                          Operator Work
 
 template<typename Type>
-ostream& operator<<(ostream& stream, const vector<Type>& vector) { // Вывод вектора через cout
-	for (const auto& i : vector)
-		stream << i << " ";
-	return stream;
+ostream& operator<<(ostream& out, const vector<Type>& vector) { // Вывод вектора через cout
+	return out << '[' << Join(vector, ',') << ']';
 }
 
 istream& operator>>(istream& stream, vector<string>& vector) { // Вводит значения вектора string

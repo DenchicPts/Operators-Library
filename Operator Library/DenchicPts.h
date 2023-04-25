@@ -6,9 +6,33 @@
 #include <sstream>
 #include <iomanip>
 #include <cstdlib>
-#include "OperVector.h"
-#include "OperSet.h"
-#include "OperMap.h"
-
+#include "OperVector.cpp"
+#include "OperSet.cpp"
+#include "OperMap.cpp"
 using namespace std;
 
+
+
+
+//									Multi Function
+
+template<typename Collection>
+string Join(const Collection& collect, char d) {
+	stringstream ss;
+	bool first = true;
+	for (const auto& i : collect)
+	{
+		if (!first) {
+			ss << d << " ";
+		}
+		first = false;
+		ss << i;
+	}
+	return ss.str();
+}
+
+
+template<typename First, typename Second>
+ostream& operator<<(ostream& out, pair<First, Second> p) {
+	return out << '(' << p.first << '-' << p.second << ')';
+}

@@ -4,20 +4,18 @@
 #include <set>
 using namespace std;
 
+template<typename Collection>
+string Join(const Collection& collect, char d);
 //                                   Operator Work
 
 template<typename Type>
-ostream& operator<<(ostream& stream, const set<Type>& sets) { // Вывод множества через cout
-	for (const auto& i : sets)
-		stream << i << " ";
-	return stream;
+ostream& operator<<(ostream& out, const set<Type>& sets) { // Вывод множества через cout
+	return  out << '(' << Join(sets,',') << ')';
 }
 
 template<typename Type>
-ostream& operator<<(ostream& stream, const multiset<Type>& multiset) { // Вывод мульти множества через cout
-	for (const auto& i : multiset)
-		stream << i << " ";
-	return stream;
+ostream& operator<<(ostream& out, const multiset<Type>& multiset) { // Вывод мульти множества через cout
+	return  out << '(' << Join(multiset, ',') << ')';
 }
 
 //                                     Default Function

@@ -1,26 +1,19 @@
 #include "DenchicPts.h"
+int main() {
 
-void main() {
+	vector ab = { 1,2,4 };
+	vector<vector<int>> ab2 = {{12,42},{43,32}};
+	vector ab3 = {"String ebatj"};
+	cout << ab << endl << ab2 << endl << ab3 << endl;
 
+	map<int, string> bb = {
+		{1,"kek"},
+		{3,"keks"},
+		{2,"keke"},
+	};
 
-	multimap<int, string> abobus;
-	abobus.emplace(1, "2");
-	abobus.emplace(3, "4");
-	abobus.emplace(2, "3");
-	abobus.emplace(5, "6");
-	abobus.emplace(6, "7");
+	cout << bb << endl;
 
-
-	map<int, string> abobus2;
-	abobus.emplace(2, "2");
-	abobus.emplace(4, "4");
-	abobus.emplace(3, "3");
-	abobus.emplace(6, "6");
-	abobus.emplace(7, "7");
-
-	multimap<int, string> abobus3 = abobus2 + abobus;
-
-	cout << abobus + abobus2;
-	cout << abobus3;
-	return;
+	set ups = { 1,2,3,4,5,6,1,3, };
+	cout << ups << endl;
 }
