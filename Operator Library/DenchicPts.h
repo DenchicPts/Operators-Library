@@ -12,9 +12,6 @@
 
 using namespace std;
 
-
-
-
 //									Multi Function
 
 template<typename Collection>
@@ -31,7 +28,6 @@ string Join(const Collection& collect, char d) {
 	}
 	return ss.str();
 }
-
 
 template<typename First, typename Second>
 ostream& operator<<(ostream& out, const pair<First, Second>& p) {

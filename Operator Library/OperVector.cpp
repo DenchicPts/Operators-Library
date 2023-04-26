@@ -163,9 +163,7 @@ void VectorOut(const vector<Type>& vectr, const int& min, const int& max) {
 template <typename Type, typename = enable_if_t<is_arithmetic_v<Type>>>
 void VectorFill(vector<Type>& vectr, const int max, size_t amount) {
 	for (size_t i = 0; i < amount; i++)
-	{
 		vectr.push_back(rand() % max);
-	}
 }
 template <typename Type, typename = enable_if_t<is_arithmetic_v<Type>>>
 void VectorFill(vector<Type>& vectr, const int min, const int max, size_t amount) {
@@ -174,11 +172,12 @@ void VectorFill(vector<Type>& vectr, const int min, const int max, size_t amount
 	}
 }
 
-vector<int> VectorFill(const int max, size_t amount) {
-	vector<int> vectr;
+
+template <typename Type, typename = enable_if_t<is_arithmetic_v<Type>>>
+vector<Type> VectorFill(const Type& max, const size_t& amount) {
+	vector<Type> vectr;
 	for (size_t i = 0; i < amount; i++)
-	{
 		vectr.push_back(rand() % max);
-	}
+
 	return vectr;
 }

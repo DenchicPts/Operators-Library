@@ -66,6 +66,22 @@ void MapFill(map<Type, Type2>& m, const size_t& cell) { // заполнение map вводом
 }
 
 template<typename Type, typename Type2>
+map<Type,Type2> MapFill( const size_t& cell) { // заполнение map вводом с клавиатуры
+	map<Type, Type2> m;
+	Type first;
+	Type2 second;
+	for (size_t i = 0; i < cell; i++)
+	{
+		cout << "Enter key for value : ";
+		cin >> first;
+		cout << "Enter value : ";
+		cin >> second;
+		m.emplace(first, second);
+	}
+	return m;
+}
+
+template<typename Type, typename Type2>
 void MultiMapFill(multimap<Type, Type2>& m, const size_t& cell) { // заполнение multimap вводом с клавиатуры
 	Type first;
 	Type2 second;
@@ -77,6 +93,22 @@ void MultiMapFill(multimap<Type, Type2>& m, const size_t& cell) { // заполнение 
 		cin >> second;
 		m.emplace(first, second);
 	}
+}
+
+template<typename Type, typename Type2>
+multimap<Type,Type2> MultiMapFill( const size_t& cell) { // заполнение multimap вводом с клавиатуры
+	multimap<Type, Type2> m;
+	Type first;
+	Type2 second;
+	for (size_t i = 0; i < cell; i++)
+	{
+		cout << "Enter key for value : ";
+		cin >> first;
+		cout << "Enter value : ";
+		cin >> second;
+		m.emplace(first, second);
+	}
+	return m;
 }
 
 template <typename Type1, typename Type2>
