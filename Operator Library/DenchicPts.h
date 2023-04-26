@@ -9,6 +9,7 @@
 #include "OperVector.cpp"
 #include "OperSet.cpp"
 #include "OperMap.cpp"
+
 using namespace std;
 
 
@@ -33,6 +34,6 @@ string Join(const Collection& collect, char d) {
 
 
 template<typename First, typename Second>
-ostream& operator<<(ostream& out, pair<First, Second> p) {
+ostream& operator<<(ostream& out, const pair<First, Second>& p) {
 	return out << '(' << p.first << '-' << p.second << ')';
 }

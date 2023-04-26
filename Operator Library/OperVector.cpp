@@ -173,3 +173,12 @@ void VectorFill(vector<Type>& vectr, const int min, const int max, size_t amount
 		vectr.push_back(min + rand() % (max - min + 1));
 	}
 }
+
+vector<int> VectorFill(const int max, size_t amount) {
+	vector<int> vectr;
+	for (size_t i = 0; i < amount; i++)
+	{
+		vectr.push_back(rand() % max);
+	}
+	return vectr;
+}
