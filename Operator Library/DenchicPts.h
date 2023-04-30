@@ -6,11 +6,19 @@
 #include <sstream>
 #include <iomanip>
 #include <cstdlib>
+using namespace std;
+
+template<typename Collection>
+string Join(const Collection& collect, char d);
+
+template<typename First, typename Second>
+ostream& operator<<(ostream& out, const pair<First, Second>& p);
+
 #include "OperVector.cpp"
 #include "OperSet.cpp"
 #include "OperMap.cpp"
 
-using namespace std;
+
 
 //									Multi Function
 

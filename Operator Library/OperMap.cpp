@@ -2,10 +2,7 @@
 
 #include "DenchicPts.h"
 #include <map>
-using namespace std;
 
-template<typename Collection>
-string Join(const Collection& collect, char d);
 //                                     Operation Work
 
 template<typename Key, typename Value>

@@ -2,10 +2,6 @@
 
 #include "DenchicPts.h"
 #include <vector>
-using namespace std;
-
-template<typename Collection>
-string Join(const Collection& collect, char d);
 
 //                          Operator Work
 
