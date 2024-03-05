@@ -19,7 +19,6 @@ ostream& operator<<(ostream& out, const pair<First, Second>& p);
 #include "OperMap.cpp"
 
 
-
 //									Multi Function
 
 template<typename Collection>

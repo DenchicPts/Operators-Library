@@ -135,7 +135,9 @@
     <ClInclude Include="DenchicPts.h" />
     <ClInclude Include="OperMap.cpp" />
     <ClInclude Include="OperSet.cpp" />
-    <ClInclude Include="OperVector.cpp" />
+    <ClInclude Include="OperVector.cpp">
+      <FileType>CppCode</FileType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

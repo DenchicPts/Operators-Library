@@ -3,6 +3,9 @@ int main() {
 	srand(time(NULL));
 
 	vector ab = VectorFill(100, 20);
+	cout << ab;
+
+
 	set kek = SetFill(10, 20);
 	multiset dich = MultiSetFill(10, 20);
 
